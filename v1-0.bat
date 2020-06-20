@@ -1,13 +1,20 @@
+REM this code is pretty self-explainitory but anyways, if you fell in love with comments (litteraly nobody asked for that),
+REM here you go!
+
 :start
+REM normal stuff
 @echo off
 color 3f
 title StyxMineCMD - Help: bit.ly/minecmd
+REM reset variables to default one
 set mydrive=C
 set pack=StyxMineCMD
 goto updatedrive
 
 :updatedrive
+REM goes to the path
 cd %mydrive%:\Users\%username%\AppData\Roaming\.minecraft\resourcepacks\%pack%\assets\minecraft\textures\item
+REM checks if the user installed the texturepack correctly by checking the "ok"-file in it
 if exist ok (
     goto help
 ) else (
@@ -18,6 +25,7 @@ if exist ok (
 goto help
 
 :help
+REM help menu
 cls
 echo --MISCELLANEOUS--
 echo.
@@ -45,6 +53,7 @@ echo to apply the changes to the game!
 goto ask
 
 :ask
+REM user input for commands
 echo Select new action:
 set input=
 set /p input=!
@@ -59,6 +68,7 @@ pause > NUL
 goto error
 
 :tutorial
+REM opens github page
 start http://bit.ly/minecmd
 goto help
 
@@ -81,6 +91,8 @@ goto updatedrive
 echo debug-echo ist now on.
 goto help
 
+REM ruby and noruby just copy some files nothin' special
+
 :ruby
 echo ---
 xcopy /y ruby-normal.png emerald.png
@@ -98,6 +110,7 @@ cls
 goto ask
 
 :error
+REM if someone writes a wrong command
 echo.
 echo.
 echo --ERROR--
