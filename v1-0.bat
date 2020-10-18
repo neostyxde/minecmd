@@ -1,4 +1,4 @@
-REM this code is pretty self-explainitory but anyways, if you fell in love with comments (litteraly nobody asked for that),
+REM this code is pretty self-explainitory but anyways, if you fell in love with comments (literally nobody asked for that),
 REM here you go!
 
 :start
